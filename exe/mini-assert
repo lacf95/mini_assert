@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+# frozen_string_literal: true
+
+require 'mini_assert'
+
+runnable = MiniAssert::TestRunnable.new
+
+at_exit do
+  runnable.run!
+end

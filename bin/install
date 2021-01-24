@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+# frozen_string_literal: true
+
+require_relative '../lib/mini_assert/version'
+
+puts "[ bin/install ] Building MiniAssert gem version #{MiniAssert::VERSION}"
+system('gem build mini_assert.gemspec')
+
+puts "[ bin/install ] Installing MiniAssert gem version #{MiniAssert::VERSION}"
+system("gem install mini_assert-#{MiniAssert::VERSION}.gem")
